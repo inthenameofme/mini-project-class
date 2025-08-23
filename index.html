@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Portfolio</title>
+    <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6366F1 0%, #2563EB 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #2563EB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .project-card img {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="bi bi-code-square me-2"></i>Mini Project
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week1/index.html">HTML & CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week2/index.html">Tailwind CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="week3/index.html">Bootstrap</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search projects..." aria-label="Search">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold mb-4">Welcome to My Mini Project Journey</h1>
+                    <p class="lead mb-4">Explore my progression through different frontend technologies - from basic HTML & CSS to modern frameworks like Tailwind and Bootstrap.</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#biodata" class="btn btn-light btn-lg">View Profile</a>
+                        <a href="#projects" class="btn btn-outline-light btn-lg">See Projects</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="asset/hayato-togashi-oMi5EY92Oyk-unsplash.webp" alt="Hero Image" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Profile Section -->
+<section id="biodata" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="asset/hayato-togashi-oMi5EY92Oyk-unsplash.webp" class="img-fluid rounded-start h-100 object-fit-cover" alt="Foto Profil">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <h2 class="card-title fw-bold mb-3">Hann</h2>
+                                <p class="card-text lead">Web Developer & UI Designer</p>
+                                <p class="card-text">Saya adalah seorang web developer yang passionate dalam menciptakan pengalaman digital yang menarik dan fungsional. Selalu bersemangat untuk belajar teknologi baru dan mengembangkan proyek-proyek inovatif.</p>
+                                <div class="mt-4">
+                                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                        <i class="bi bi-envelope-fill me-2"></i>Hubungi Saya
+                                    </button>
+                                    <a href="#projects" class="btn btn-outline-primary">
+                                        <i class="bi bi-folder-fill me-2"></i>Lihat Projects
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">My Projects</h2>
+        <div class="row g-4">
+            <!-- HTML & CSS Project -->
+            <div class="col-md-4">
+                <div class="card project-card h-100">
+                    <img src="asset/kevin-canlas-cFFEeHNZEqw-unsplash.webp" class="card-img-top" alt="HTML & CSS Project">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML & CSS Project</h5>
+                        <p class="card-text">A showcase of fundamental web development skills using pure HTML and CSS.</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-primary">HTML5</span>
+                            <span class="badge bg-info">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <a href="week1/index.html" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-arrow-right me-2"></i>View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tailwind Project -->
+            <div class="col-md-4">
+                <div class="card project-card h-100">
+                    <img src="asset/pankaj-patel-bYiw48KLbmw-unsplash.webp" class="card-img-top" alt="Tailwind Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Tailwind CSS Project</h5>
+                        <p class="card-text">Modern and responsive design implementation using Tailwind CSS framework.</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-cyan">Tailwind</span>
+                            <span class="badge bg-primary">Responsive</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <a href="week2/index.html" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-arrow-right me-2"></i>View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bootstrap Project -->
+            <div class="col-md-4">
+                <div class="card project-card h-100">
+                    <img src="asset/rashed-paykary-GAoGLvYLt3c-unsplash.webp" class="card-img-top" alt="Bootstrap Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap Project</h5>
+                        <p class="card-text">Feature-rich website built with Bootstrap 5, showcasing component usage and customization.</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-purple">Bootstrap 5</span>
+                            <span class="badge bg-success">Components</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <a href="week3/index.html" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-arrow-right me-2"></i>View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="contactModalLabel">Get In Touch</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-grid gap-4">
+                    <div class="text-center mb-3">
+                        <p class="text-muted">Choose your preferred way to connect</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="https://github.com/blipWo" target="_blank" class="btn btn-outline-dark btn-lg rounded-circle">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hann.code" target="_blank" class="btn btn-outline-danger btn-lg rounded-circle">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/+6289654369141" target="_blank" class="btn btn-outline-success btn-lg rounded-circle">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="separator text-center my-3">
+                        <span class="bg-white px-3 text-muted">Or send a message</span>
+                        <hr class="my-0">
+                    </div>
+
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">
+                                Please enter your name
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-send me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark py-4">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0">
+                <a href="/" class="text-white text-decoration-none fw-bold">Mini Project</a>
+                <span class="text-muted mx-2">|</span>
+                <span class="text-muted">&copy; 2025 All rights reserved</span>
+            </div>
+            <div class="d-flex gap-4">
+                <a href="week1/index.html" class="text-muted text-decoration-none hover-text-white">HTML & CSS</a>
+                <a href="week2/index.html" class="text-muted text-decoration-none hover-text-white">Tailwind</a>
+                <a href="week3/index.html" class="text-muted text-decoration-none hover-text-white">Bootstrap</a>
+            </div>
+            <div class="mt-3 mt-md-0">
+                <a href="https://wa.me/+6289654369141" class="text-muted text-decoration-none mx-2" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="#" class="text-muted text-decoration-none mx-2">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="#" class="text-muted text-decoration-none mx-2">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .hover-text-white:hover {
+        color: white !important;
+        transition: color 0.3s ease;
+    }
+    .text-muted {
+        transition: color 0.3s ease;
+    }
+    footer a:hover {
+        color: white !important;
+    }
+</style>
+
+<script>
+// Form validation
+(function () {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            } else {
+                event.preventDefault()
+                sendToWhatsApp()
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
+})()
+
+function sendToWhatsApp() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const phoneNumber = '6289654369141';
+    const encodedMessage = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
